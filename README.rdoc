@@ -21,6 +21,13 @@ Setting up a Rails app with angular. Code from flapper-example.
 Add Rails ActiveRecords
 * run: $ rails generate model Post title:string link:string upvotes:integer
 * Run: $ rails generate model Comment body:string upvotes:integer post:references
-* Decalse association in post model
+* Declare association in post model
 * Add as_json to post model
 This is checkin works, but the logic in this step isn't used yet.
+
+===Creating Routes and Controllers
+Create posts and comments controllers
+* Run: rails generate controller Posts --skip-assets --skip-template-engine
+* Run: rails generate controller Comments --skip-assets --skip-template-engine
+* Add "respond_to :json" to application_controller.rb - so its responds to json.
+* In Rails4.2, need to add to Gemfile: gem 'responders', '~> 2.0'
