@@ -16,3 +16,11 @@ Setting up a Rails app with angular. Code from flapper-example.
 * Add to application.js: "//= angular-rails-templates"
 * Inject the templates module into our Angular app
 * ... lots
+
+===Generating ActiveRecord Models
+Add Rails ActiveRecords
+* run: $ rails generate model Post title:string link:string upvotes:integer
+* Run: $ rails generate model Comment body:string upvotes:integer post:references
+* Decalse association in post model
+* Add as_json to post model
+This is checkin works, but the logic in this step isn't used yet.
