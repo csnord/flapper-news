@@ -38,3 +38,18 @@ Wire front json end with Rails backend. Calling http://localhost:3000/posts.json
 * Inject $http into post factory (/app/assets/javascripts/posts/posts.js) and add "getAll()" - to get the records. 
 * Add method for creating posts
 * Call create post method from MainCtrl
+
+
+===Upvoting Posts
+Now the upvotes. Change again file: /app/assets/javascripts/posts/posts.js Add the following "upvote" method:
+	o.upvote = function(post) {
+	  return $http.put('/posts/' + post.id + '/upvote.json')
+	    .success(function(data){
+	      post.upvotes += 1;
+	    });
+	};
+Then update: "incrementUpvotes()" in the controller.
+
+===Finishing Off Comments
+Final convert, getting db data and getting it to front end & vice versa.
+Updating posts and comment services. Lots of twiddling.

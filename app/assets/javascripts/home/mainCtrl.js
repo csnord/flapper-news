@@ -1,13 +1,9 @@
-// var app = angular.module('flapperNews', ['ui.router', 'templates']);
-// app.controller('MainCtrl', [
-
 angular.module('flapperNews')
 .controller('MainCtrl', [
   '$scope',
-  'posts',                      // Here we are placing the "posts" service
-  function($scope, posts){      // into the MainCtrl controller and
-    $scope.posts = posts.posts; // we place it in scope.
-    $scope.incrementUpvotes = function(post) { post.upvotes += 1; };
+  'posts',                        // Here we are placing the "posts" service
+  function($scope, posts){        // into the MainCtrl controller and
+    $scope.posts = posts.posts;   // we place it in scope.
     $scope.addPost = function(){
       if(!$scope.title || $scope.title === '') { return; }
       posts.create({
@@ -17,4 +13,5 @@ angular.module('flapperNews')
       $scope.title = '';
       $scope.link = '';
     };
+    $scope.incrementUpvotes = function(post) { posts.upvote(post); };    
 }]);
