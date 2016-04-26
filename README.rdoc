@@ -68,4 +68,6 @@ Let Angular have some say in Devise:
 * Inject devise into module: 
 ** angular.module('flapperNews', ['ui.router', 'templates', 'Devise'])
 
-Note: commit not working.... maybe net commit!
+Note: commit not working.... did commit!
+
+===Adding a Navigation Bar and Authentication Forms
