@@ -53,3 +53,19 @@ Then update: "incrementUpvotes()" in the controller.
 ===Finishing Off Comments
 Final convert, getting db data and getting it to front end & vice versa.
 Updating posts and comment services. Lots of twiddling.
+
+===Adding User Authentication with Devise
+Add Devise
+* Add Devise to Gemfile & run "bundle install"
+* Run: rails generate devise:install
+* Run: rails generate devise User
+* Run: rails generate migration AddUsernameToUser username:string:uniq
+* Run: rake db:migrate
+
+Let Angular have some say in Devise:
+* Run: bower install angular-devise --save
+* In file: application.js   Add after "angular": //= angular-devise
+* Inject devise into module: 
+** angular.module('flapperNews', ['ui.router', 'templates', 'Devise'])
+
+Note: commit not working.... maybe net commit!
