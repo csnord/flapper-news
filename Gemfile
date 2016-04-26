@@ -18,6 +18,8 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 gem 'angular-rails-templates'
 gem 'sprockets', '2.12.3'
 gem 'responders', '~> 2.0'   # Needed in 4.2 for respond_to
+gem 'angular_rails_csrf'     # Needed for CSRF
+
 
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console

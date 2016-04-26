@@ -31,3 +31,10 @@ Create posts and comments controllers
 * Run: rails generate controller Comments --skip-assets --skip-template-engine
 * Add "respond_to :json" to application_controller.rb - so its responds to json.
 * In Rails4.2, need to add to Gemfile: gem 'responders', '~> 2.0'
+
+
+===Wiring Everything Up
+Wire front json end with Rails backend. Calling http://localhost:3000/posts.json (index) should grab all the posts in our db. 
+* Inject $http into post factory (/app/assets/javascripts/posts/posts.js) and add "getAll()" - to get the records. 
+* Add method for creating posts
+* Call create post method from MainCtrl
