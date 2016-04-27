@@ -71,3 +71,14 @@ Let Angular have some say in Devise:
 Note: commit not working.... did commit!
 
 ===Adding a Navigation Bar and Authentication Forms
+The usual
+
+===Associating Users with Posts and Comments
+We did:
+* Associate posts with users: rails g migration AddUserRefToPosts user:references
+* Associate comments with users: rails g migration AddUserRefToComments user:references
+* Add to post & comment model: belongs_to :user
+* Changes to post & comments controller 
+* Changes to post & comments model - as_json method.
+ 
+
